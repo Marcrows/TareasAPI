@@ -7,6 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Inject dependencies
+builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,7 +23,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseTimeMiddleware();
+// app.UseTimeMiddleware();
 
 app.MapControllers();
 

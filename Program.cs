@@ -8,8 +8,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Inject dependencies
-// builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
-builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldService());
+builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
+// builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldService());
 
 var app = builder.Build();
 

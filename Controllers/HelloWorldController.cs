@@ -8,13 +8,24 @@ public class HelloWorldController : ControllerBase
 {
     IHelloWorldService helloWorldService;
 
-    public HelloWorldController(IHelloWorldService hw)
+    private readonly ILogger<HelloWorldController> _logger;
+
+    public HelloWorldController(IHelloWorldService hw, ILogger<HelloWorldController> logger)
     {
+        _logger = logger;
         helloWorldService = hw;
     }
-
+    
     public IActionResult Get()
     {
+        _logger.LogDebug("Logging from Get(). Hi!");
         return Ok(helloWorldService.GetHelloWorld());
+    }
+
+    [Route("get/bye")]
+    public IActionResult GetBye()
+    {
+        _logger.LogDebug("Saying goodbye @ GetBye()");
+        return Ok(helloWorldService.GetByeWorld());
     }
 }

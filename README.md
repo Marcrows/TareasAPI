@@ -32,6 +32,7 @@ Simple API to manage your tasks! (Project done in the course "APIs con .NET" at 
 ```http
   POST /api/tarea
 ```
+
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `CategoriaId`      | `string` | **Required**. Id of category to classify your tasks |
@@ -44,6 +45,7 @@ Simple API to manage your tasks! (Project done in the course "APIs con .NET" at 
 ```http
   PUT /api/tarea/${id}
 ```
+
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of task to update |
@@ -82,6 +84,7 @@ Simple API to manage your tasks! (Project done in the course "APIs con .NET" at 
 ```http
   POST /api/category
 ```
+
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `Nombre`      | `string` | **Required**. Name of the category |
@@ -93,6 +96,7 @@ Simple API to manage your tasks! (Project done in the course "APIs con .NET" at 
 ```http
   PUT /api/categoria/${id}
 ```
+
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of category to update |

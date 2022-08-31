@@ -12,6 +12,8 @@ Simple API to manage your tasks! (Project done in the course "APIs con .NET" at 
 
 ## API Reference
 
+### Tasks
+
 #### Get all your tasks
 
 ```http
@@ -63,6 +65,8 @@ Simple API to manage your tasks! (Project done in the course "APIs con .NET" at 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of task to delete |
+
+### Categories
 
 #### Get all categories
 
